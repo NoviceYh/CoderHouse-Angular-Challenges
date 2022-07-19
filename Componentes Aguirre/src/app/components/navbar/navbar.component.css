@@ -1,0 +1,36 @@
+ul li{
+    color: #051112;
+    font-size: 16px;
+}
+
+h5{
+    color: #051112;
+}
+
+.navbar-element{
+    background-color: rgb(232, 255, 60) !important;
+    border-top: #051112 solid 1px;
+}
+
+a{
+    text-decoration:none;
+    font-weight: bold;
+}
+.link{
+    color: rgb(84, 133, 177);
+}
+.git{
+    color: rgb(16, 17, 17);
+}
+
+.profile{
+    margin: 15px;
+}
+
+.profile h3{
+    color : rgb(232, 255, 60);
+    font-style: italic;
+}
+.profile p{
+    color: rgba(255,255,255, .75);
+}
