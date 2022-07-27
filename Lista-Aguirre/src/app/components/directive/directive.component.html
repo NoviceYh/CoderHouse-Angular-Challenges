@@ -23,12 +23,12 @@
         <td> {{player.nombre}} </td>
         <td> {{player.apellido}} </td>
         <td [ngClass]="player.posicion == 'Arquero' ? 'arquero' : player.posicion == 'Defensor' ? 'defensor' : player.posicion == 'Mediocampista' ? 'mediocampista' : 'delantero' "> {{player.posicion}} </td>
-        <span [ngSwitch]="player.nacionalidad">
-            <td *ngSwitchCase="'Argentino'"><img class="nacionalidad" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/1200px-Flag_of_Argentina.svg.png" alt=""></td>
-            <td *ngSwitchCase="'Colombiano'"><img class="nacionalidad" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/1200px-Flag_of_Colombia.svg.png" alt=""></td>
-            <td *ngSwitchCase="'Uruguayo'"><img class="nacionalidad" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/270px-Flag_of_Uruguay.svg.png" alt=""></td>
-            <td *ngSwitchCase="'Chileno'"><img class="nacionalidad" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/1200px-Flag_of_Chile.svg.png" alt=""></td>
-            <td *ngSwitchCase="'Paraguayo'"><img class="nacionalidad" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Paraguay.svg/328px-Flag_of_Paraguay.svg.png" alt=""></td>
+        <span class="nacionalidad" [ngSwitch]="player.nacionalidad">
+            <td *ngSwitchCase="'Argentino'"><img class="nacionalidad" src={{countries.argentina}} alt=""></td>
+            <td *ngSwitchCase="'Colombiano'"><img class="nacionalidad" src={{countries.colombia}} alt=""></td>
+            <td *ngSwitchCase="'Uruguayo'"><img class="nacionalidad" src={{countries.uruguay}} alt=""></td>
+            <td *ngSwitchCase="'Chileno'"><img class="nacionalidad" src={{countries.chile}} alt=""></td>
+            <td *ngSwitchCase="'Paraguayo'"><img class="nacionalidad" src={{countries.paraguay}} alt=""></td>
             <td *ngSwitchDefault>No hay registro</td>
         </span>
         <ng-container *ngIf="player.condicion_fisica > 7; else second" ><td>Disponible</td></ng-container>
