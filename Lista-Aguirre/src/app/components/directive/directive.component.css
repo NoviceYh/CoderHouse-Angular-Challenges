@@ -1,0 +1,71 @@
+.encabezado{
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+.encabezado img{
+    height: 200px;
+    float: left;
+}
+.botones{
+    display: flex;
+    justify-content: center;
+}
+button{
+    padding: 0 20px;
+    margin: 0 20px;
+    background-color: #eeeeee;
+}
+.subtitulo{
+    padding: 20px 0 20px 10px;
+    font-style: italic;
+    text-align: center;
+}
+.cuerpo{
+    background-color: rgb(216, 12, 12);
+    padding-bottom: 50px;
+}
+h1{
+    color: azure;
+}
+h2{
+    color: rgb(148, 0, 0);
+    font-size: 56px;
+    -webkit-text-stroke: .5px white;
+}
+table{
+    text-align: center;
+    font-weight: bold;
+    background-color: #eeeeee;
+}
+
+.nacionalidad{
+    width: 50px;
+    height: 25px;
+    align-items: center;
+}
+
+.arquero{
+    background-color: rgb(226, 226, 126);
+}
+
+.defensor{
+    background-color: rgb(131, 206, 206);
+}
+
+.mediocampista{
+    background-color: rgb(94, 155, 94);
+}
+
+.delantero{
+    background-color: rgb(206, 95, 95);
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #222222;
+    color: aliceblue;
+    text-align: center;
+    padding: 5px;
+}

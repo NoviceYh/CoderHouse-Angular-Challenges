@@ -1,1 +1,49 @@
-<p>directive works!</p>
+<div class="encabezado">
+    <img src="http://www.cariverplate.com.ar/imagenes/contenidos/2016-10/6854-logo.jpg" alt="">
+</div>
+<div class="cuerpo">
+
+
+<div class="subtitulo">
+    <h2>Lista de jugadores</h2>
+</div>
+
+<table class="table container table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Posicion</th>
+        <th scope="col">Nacionalidad</th>
+        <th scope="col">Disponibilidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let player of team">
+        <td> {{player.nombre}} </td>
+        <td> {{player.apellido}} </td>
+        <td [ngClass]="player.posicion == 'Arquero' ? 'arquero' : player.posicion == 'Defensor' ? 'defensor' : player.posicion == 'Mediocampista' ? 'mediocampista' : 'delantero' "> {{player.posicion}} </td>
+        <span [ngSwitch]="player.nacionalidad">
+            <td *ngSwitchCase="'Argentino'"><img class="nacionalidad" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/1200px-Flag_of_Argentina.svg.png" alt=""></td>
+            <td *ngSwitchCase="'Colombiano'"><img class="nacionalidad" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/1200px-Flag_of_Colombia.svg.png" alt=""></td>
+            <td *ngSwitchCase="'Uruguayo'"><img class="nacionalidad" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/270px-Flag_of_Uruguay.svg.png" alt=""></td>
+            <td *ngSwitchCase="'Chileno'"><img class="nacionalidad" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/1200px-Flag_of_Chile.svg.png" alt=""></td>
+            <td *ngSwitchCase="'Paraguayo'"><img class="nacionalidad" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Paraguay.svg/328px-Flag_of_Paraguay.svg.png" alt=""></td>
+            <td *ngSwitchDefault>No hay registro</td>
+        </span>
+        <ng-container *ngIf="player.condicion_fisica > 7; else second" ><td>Disponible</td></ng-container>
+        <ng-template #second>
+            <ng-container *ngIf="player.condicion_fisica > 5;else third"><td>Necesita descanso</td></ng-container>
+        </ng-template>
+        <ng-template #third><td>En recuperacion</td></ng-template>
+      </tr>
+    </tbody>
+  </table>
+  <div class="botones">
+    <button class="btn btn-outline-danger" (click)="mostrarDisponibles()">Mostrar disponibles</button>
+    <button class="btn btn-outline-danger" (click)="mostrarTodos()">Mostrar todos</button>
+  </div>
+</div>
+<div class="footer">
+    <p>Copyrigth 2022 - Lista Aguirre - CoderHouse - Angular</p>
+</div>
