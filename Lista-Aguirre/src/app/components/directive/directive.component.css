@@ -3,6 +3,9 @@
     background-color: rgb(255, 255, 255);
     text-align: center;
 }
+h5{
+    margin-left: 5px;
+}
 .encabezado img{
     height: 200px;
     float: left;

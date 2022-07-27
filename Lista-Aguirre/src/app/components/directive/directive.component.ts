@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectiveComponent implements OnInit {
 
-  palabras = ['papa', 'pepe', 'pipi'];
+  actualDate = Date.now();
 
   team2 = [{
     nombre: 'Franco',
