@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>Agregar una persona a la base de datos</h1>
+</div>
+<div class="container contenedor">
+    <h3>Formulario</h3>
+    <form [formGroup]="formularioContacto" (ngSubmit)="enviarDatos()">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="nombre">
+            <div *ngIf="this.formularioContacto.get('nombre')?.errors?.['minlength']" class="alert alert-danger">El nombre debe ser de 2 o más caracteres</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="apellido">
+            <div *ngIf="this.formularioContacto.get('apellido')?.errors?.['minlength']" class="alert alert-danger">El apellido debe ser de 2 o más caracteres</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+            <div *ngIf="this.formularioContacto.get('email')?.errors?.['email']" class="alert alert-danger">Debe tener formato de email</div>
+          </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Direccion</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="direccion">
+            <div *ngIf="this.formularioContacto.get('direccion')?.errors?.['minlength']" class="alert alert-danger">La direccion debe ser de 2 o más caracteres</div>
+        </div>
+        <label for="exampleInputEmail1" class="form-label">Genero</label>
+        <select class="form-select" aria-label="Default select example" formControlName="genero">
+            <option value="1">Masculino</option>
+            <option value="2">Femenino</option>
+            <option value="3">Otro</option>
+          </select>
+          <br/>
+        <button type="submit" class="btn btn-success" [disabled]="!formularioContacto.valid">Enviar</button>
+        <button class="btn btn-primary" (click)="limpiar()">Limpiar</button>
+      </form>
+</div>
+
+
