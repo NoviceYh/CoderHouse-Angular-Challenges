@@ -1,0 +1,18 @@
+.toolbar {
+    background-color: aquamarine !important;
+    align-content: center;
+}
+
+.tablee{
+    background-color: rgb(168, 255, 226) !important;
+    padding: 25px;
+}
+
+.navbar{
+    background-color: rgb(168, 255, 226) !important;
+    padding-left: 30px;
+}
+
+.borderr{
+    border: rgb(45, 255, 185) .5px solid;
+}

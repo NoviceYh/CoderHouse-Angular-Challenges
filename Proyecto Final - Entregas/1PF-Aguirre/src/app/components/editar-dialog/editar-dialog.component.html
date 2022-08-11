@@ -1,0 +1,35 @@
+<div style="text-align: center;">
+
+
+<h1 mat-dialog-title>Editar estudiante</h1>
+<div mat-dialog-content>
+    <form [formGroup]="formulario">
+
+        <mat-form-field appearance="fill">
+            <mat-label>DNI</mat-label>
+            <input formControlName="dni" matInput>
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input formControlName="nombre" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Apellido</mat-label>
+            <input formControlName="apellido" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Curso</mat-label>
+            <input formControlName="curso" matInput>
+        </mat-form-field>
+
+        <mat-slide-toggle formControlName="matriculaAbierta">matriculaAbierta</mat-slide-toggle>
+    </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-stroked-button (click)="cerrar()" color="warn">Cerrar</button>
+    <button mat-stroked-button (click)="actualizar()" color="primary">Actualizar</button>
+</div>
+</div>

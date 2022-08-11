@@ -1,0 +1,9 @@
+<div class="dialog">
+    <h3 mat-dialog-title>¿Realmente desea eliminar este estudiante?</h3>
+    <div mat-dialog-content>
+        <div mat-dialog-actions [align]="'end'">
+            <button mat-stroked-button (click)="volver()" color="primary">Volver</button>
+            <button mat-stroked-button (click)="eliminar()" color="warn">Eliminar</button>
+        </div>
+    </div>
+</div>

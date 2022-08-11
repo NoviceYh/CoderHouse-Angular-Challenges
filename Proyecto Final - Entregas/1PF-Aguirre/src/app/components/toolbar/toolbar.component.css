@@ -1,0 +1,14 @@
+.div-tool{
+    display: flex;
+    align-content: center !important;    
+    justify-content: space-between;
+}
+h1{
+    margin-left: 15px;
+}
+button{
+    margin-right: 50px;
+}
+.buttons{
+    padding-right: 30px;
+}
